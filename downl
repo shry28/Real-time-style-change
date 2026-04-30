@@ -1,0 +1,10 @@
+import urllib.request
+
+print("Downloading candy.t7 model from Stanford servers... This might take a minute depending on your internet speed.")
+url = "https://cs.stanford.edu/people/jcjohns/fast-neural-style/models/instance_norm/candy.t7"
+
+try:
+    urllib.request.urlretrieve(url, "candy.t7")
+    print("Download complete! You can now run your style transfer script.")
+except Exception as e:
+    print(f"An error occurred: {e}")
